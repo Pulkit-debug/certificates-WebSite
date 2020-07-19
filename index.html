@@ -80,6 +80,7 @@
       </section>
 
       <section class="text-gray-700 body-font relative">
+        <form action="#">
         <div class="container px-5 py-24 mx-auto">
           <div class="flex flex-col text-center w-full mb-12">
             <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Reach to me</h1>
@@ -87,26 +88,29 @@
           </div>
           <div class="lg:w-1/2 md:w-2/3 mx-auto">
             <div class="flex flex-wrap -m-2">
+                
               <div class="p-2 w-1/2">
-                <input class="w-full bg-gray-100 rounded border border-gray-400 focus:outline-none focus:border-indigo-500 text-base px-4 py-2" placeholder="Name" type="text">
+                <input id="input-name" class="w-full bg-gray-100 rounded border border-gray-400 focus:outline-none focus:border-indigo-500 text-base px-4 py-2" placeholder="Name" type="text">
               </div>
               <div class="p-2 w-1/2">
-                <input class="w-full bg-gray-100 rounded border border-gray-400 focus:outline-none focus:border-indigo-500 text-base px-4 py-2" placeholder="Email" type="email">
+                <input id="input-email" class="w-full bg-gray-100 rounded border border-gray-400 focus:outline-none focus:border-indigo-500 text-base px-4 py-2" placeholder="Email" type="email">
               </div>
               <div class="p-2 w-full">
-                <textarea class="w-full bg-gray-100 rounded border border-gray-400 focus:outline-none h-48 focus:border-indigo-500 text-base px-4 py-2 resize-none block" placeholder="Message"></textarea>
+                <textarea id= "input-message" class="w-full bg-gray-100 rounded border border-gray-400 focus:outline-none h-48 focus:border-indigo-500 text-base px-4 py-2 resize-none block" placeholder="Message"></textarea>
               </div>
               <div class="p-2 w-full">
-                <button class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Submit</button>
+                <button type = "submit" onclick="details();" id="contact-submit" class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Submit</button>
               </div>
-             
+            
             </div>
           </div>
         </div>
+    </form>
       </section>
 
       <footer class="white-section" id="footer">
         <div class="container-fluid">
+            <p>Mail-to: vpulkit567@gmail.com</p>
           <a target="_blank" href="https://github.com/Pulkit-debug"><i class="social-item fab fa-github"></i></a>
           <a href="https://google.com"><i class="social-icon fab fa-instagram"></a></i> 
           <p>© Copyright 2020 Pulkit Verma</p>
