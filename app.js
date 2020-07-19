@@ -2,7 +2,7 @@ const express = require("express");
 const fs = require("fs");
 const path = require("path");
 const bodyParser = require("body-parser");
-const { request } = require("http");
+const http = require("http");
 
 const localhost = "127.0.0.1";
 const port = 80;
@@ -18,13 +18,25 @@ app.set("view engine", "pug");  // setting up the view engine for pug
 app.set("views", path.join(__dirname, "views"));    // setting up the views directory
 
 
+// creating server for serving up index.html
 
+// const home = fs.readFileSync(__dirname + "/index.html");
+
+// const server = http.createServer((req,res) => {
+//     const url = req.url;
+//     if(url == "/" || url == "/home") {
+//         res.end(home);
+//     }
+//     else {
+        
+//     }
+// });
 //other get/post stuff
 app.get("/", (req, res)=> {
     const details = "This is some content";
     // This is how we can pass varibles 
     const params = {"title": "We are using Pug", "content": details};
-    res.status(200).render("index.pug", params);
+    res.sendFile(path.join(__dirname + "/index.html"));
 });
 
 app.get("/views/college_cert.pug", (req, res) => {
@@ -37,7 +49,7 @@ app.get("/views/other_cert.pug", (req, res) => {
 
 app.get("/views/instagram.pug", (req, res) => {
     res.status(200).render("instagram.pug");
-})
+});
 
 let name;
 let email;
