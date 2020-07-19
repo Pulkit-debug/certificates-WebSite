@@ -1,0 +1,121 @@
+body {
+    background-color: rgb(252, 227, 195);
+}
+
+.computerContainer {
+    text-align: center;
+}
+/* #computing {
+    max-width: 70%;
+    height: 300px;
+    margin-top: 50px;
+}  */
+#handpofcomputing {
+    
+    padding: 141px 60px;
+    margin: 10px 0px;
+    /* align-items: center; */
+}
+
+.imagesSizeAndWidth {
+    margin-top: 30px;
+    height: 400px;
+    max-width: 80%;
+}
+
+footer {
+    padding: 40px;
+    margin: 18px;
+    text-align: center;
+}
+@media only screen and (max-width: 1000px) {
+    .imagesSizeAndWidth {
+        margin-top: 10px;
+    }
+    #handpofcomputing {
+        padding: 60px 60px;
+    }
+  }
+
+
+  /* Glowing Text */
+
+/*   
+body {
+    font-family: "Vibur", cursive;
+    background-image: url("https://www.dropbox.com/s/2ct0i6kc61vp0bh/wall.jpg?raw=1");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #141414;
+  }
+   */
+  
+  /*-- Sign Styles --*/
+  
+
+   .word {
+      /* font-size: 5.6rem; */
+      text-align: center;
+      /* line-height: 1; */
+      color: #daf107;
+      
+      animation: neon .08s ease-in-out infinite alternate;
+    }
+  
+    
+body {
+    font-family: "Vibur", cursive;
+    background-image: url("https://www.dropbox.com/s/2ct0i6kc61vp0bh/wall.jpg?raw=1");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #141414;
+  }
+
+  
+  /*-- Animation Keyframes --*/
+  
+  /* // animation */
+  
+  @keyframes neon {
+    from {
+      text-shadow:
+      0 0 6px rgba(202,228,225,0.92),
+      0 0 30px rgba(202,228,225,0.34),
+      0 0 12px rgba(30,132,242,0.52),
+      0 0 21px rgba(243, 86, 196, 0.92),
+      0 0 34px rgba(243, 78, 114, 0.78),
+      0 0 54px rgba(245, 119, 119, 0.92);
+    }
+    to {
+      text-shadow:
+      0 0 6px rgba(202,228,225,0.98),
+      0 0 30px rgba(202,228,225,0.42),
+      0 0 12px rgba(30,132,242,0.58),
+      0 0 22px rgba(245, 74, 179, 0.84),
+      0 0 38px rgba(236, 66, 123, 0.88),
+      0 0 60px rgb(238, 73, 128);
+    }
+  }
+
+  /* // link */
+
+  .link {
+	/* position: absolute; */
+	/* bottom: 10px; left: 10px; */
+	color: #828282;
+    text-decoration: none;
+  }
+	
+	.link:focus,
+	.link:hover {
+    color: #c6e2ff;
+		text-shadow:
+    0 0 2px rgba(202,228,225,0.92),
+    0 0 10px rgba(202,228,225,0.34),
+    0 0 4px rgba(30,132,242,0.52),
+    0 0 7px rgba(30,132,242,0.92),
+    0 0 11px rgba(30,132,242,0.78),
+    0 0 16px rgba(30,132,242,0.92);
+	}

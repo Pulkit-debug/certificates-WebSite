@@ -1,0 +1,26 @@
+{
+  "name": "certifications_website",
+  "version": "1.0.0",
+  "description": "This is my certifications WebSite",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pulkit-debug/certificates-WebSite.git"
+  },
+  "author": "Pulkit Verma",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pulkit-debug/certificates-WebSite/issues"
+  },
+  "homepage": "https://github.com/Pulkit-debug/certificates-WebSite#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "nodemailer": "^6.4.10",
+    "nodemailer-mailgun-transport": "^2.0.0",
+    "pug": "^3.0.0"
+  }
+}
