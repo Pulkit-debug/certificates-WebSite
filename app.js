@@ -40,15 +40,18 @@ app.get("/", (req, res)=> {
 });
 
 app.get("/views/college_cert.pug", (req, res) => {
-    res.status(200).render("college_cert.pug");
+    // res.status(200).render("college_cert.pug");
+    res.sendFile(path.join(__dirname + "/college_cert.html"));
 });
 
 app.get("/views/other_cert.pug", (req, res) => {
-    res.status(200).render("other_cert.pug");
+    // res.status(200).render("other_cert.pug");
+    res.sendFile(path.join(__dirname + "/other_cert.html"));
 });
 
 app.get("/views/instagram.pug", (req, res) => {
-    res.status(200).render("instagram.pug");
+    // res.status(200).render("instagram.pug");
+    res.sendFile(path.join(__dirname + "/instagram.html"));
 });
 
 let name;
