@@ -39,17 +39,17 @@ app.get("/", (req, res)=> {
     res.sendFile(path.join(__dirname + "/index.html"));
 });
 
-app.get("/views/college_cert.html", (req, res) => {
+app.get("/college_cert.html", (req, res) => {
     // res.status(200).render("college_cert.pug");
     res.sendFile(path.join(__dirname + "/college_cert.html"));
 });
 
-app.get("/views/other_cert.html", (req, res) => {
+app.get("/other_cert.html", (req, res) => {
     // res.status(200).render("other_cert.pug");
     res.sendFile(path.join(__dirname + "/other_cert.html"));
 });
 
-app.get("/views/instagram.html", (req, res) => {
+app.get("/instagram.html", (req, res) => {
     // res.status(200).render("instagram.pug");
     res.sendFile(path.join(__dirname + "/instagram.html"));
 });
