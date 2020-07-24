@@ -3,9 +3,22 @@ const fs = require("fs");
 const path = require("path");
 const bodyParser = require("body-parser");
 const http = require("http");
+const mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/contactFromCert', {useNewUrlParser: true});
 
 const localhost = "127.0.0.1";
 const port = 80;
+
+// Define mongoose Schema
+const contactSchema = new mongoose.Schema({
+    name: String,
+    email: String,
+    message: String
+  });
+
+  const contact = mongoose.model('contact', contactSchema);
+
+
 
 //express related stuff
 const app = express();
@@ -53,6 +66,19 @@ app.get("/instagram.html", (req, res) => {
     // res.status(200).render("instagram.pug");
     res.sendFile(path.join(__dirname + "/instagram.html"));
 });
+
+app.post("/", (req, res) => {
+    var contactData = new contact(req.body);
+    // .save() functions returns a promise so we have to use .then after that
+    // and if some error occurs then in that case we can use .catch
+    contactData.save().then(() => {
+        res.send("Your contact details has been saved to my database!!");
+    }).catch(() => {
+        res.status(400).send("Your details are not submitted kindly mail me explicitly!!");
+    })
+    // const params = {};
+    // res.sendFile(path.join(__dirname + "/index.html"), params);
+})
 
 let name;
 let email;
